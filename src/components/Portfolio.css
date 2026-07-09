@@ -1,0 +1,144 @@
+.portfolio-section {
+  position: relative;
+  background: transparent;
+}
+
+.portfolio-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 4rem;
+}
+
+.cat-btn {
+  background: #ffffff;
+  border: var(--border-width) solid #000000;
+  color: #000000;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+}
+
+.cat-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+.cat-btn.active {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.project-card {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.project-header {
+  margin-bottom: 1.5rem;
+}
+
+.project-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.badge-cyan, .badge-violet, .badge-green, .badge-pink, .badge-yellow {
+  background: #ffffff;
+  color: #000000;
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  color: #000000;
+  letter-spacing: -0.5px;
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  flex-grow: 1;
+}
+
+.project-footer {
+  margin-top: auto;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #000000;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 2px;
+}
+
+.learn-more svg {
+  transition: transform 0.15s ease;
+}
+
+.project-card:hover .learn-more {
+  color: var(--text-secondary);
+  border-color: var(--text-secondary);
+}
+
+.project-card:hover .learn-more svg {
+  transform: translateX(3px);
+}
+
+.project-glow {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .project-card {
+    padding: 2rem 1.5rem;
+  }
+}

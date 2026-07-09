@@ -1,13 +1,273 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  /* Retro Monochrome Tokens */
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+  
+  --border-color: #000000;
+  --border-width: 2.5px;
+  
+  --text-primary: #000000;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  
+  --color-primary: #000000;
+  --color-secondary: #000000;
+  --color-accent: #374151;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  
+  /* Fonts */
+  --font-display: 'Outfit', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Stark Block Shadows */
+  --shadow-sm: 3px 3px 0px #000000;
+  --shadow-md: 6px 6px 0px #000000;
+  --shadow-lg: 10px 10px 0px #000000;
+  --shadow-glow: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  /* Retro grid notebook background pattern */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  border-left: var(--border-width) solid #000000;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 7rem 0;
+  position: relative;
+  border-bottom: var(--border-width) solid #000000;
+}
+
+/* Text Gradient replacements for Black and White */
+.text-gradient {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: var(--text-primary);
+}
+
+.text-gradient-accent {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: var(--text-secondary);
+}
+
+/* Neobrutalist Stark Panel (retro box with hard shadow) */
+.glass-panel {
+  background: #ffffff;
+  border: var(--border-width) solid #000000;
+  border-radius: 0px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate(0, 0);
+}
+
+.glass-panel:hover {
+  background: #ffffff;
+  border-color: #000000;
+  box-shadow: var(--shadow-lg);
+  transform: translate(-4px, -4px);
+}
+
+/* Neobrutalist Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.2rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 0px;
+  border: var(--border-width) solid #000000;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  transform: translate(0, 0);
+}
+
+.btn-primary {
+  background: #000000;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 5px 5px 0px #000000;
+  transform: translate(-2px, -2px);
+}
+
+.btn-primary:active {
+  box-shadow: 1px 1px 0px #000000;
+  transform: translate(2px, 2px);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #000000;
+}
+
+.btn-secondary:hover {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: 5px 5px 0px #000000;
+  transform: translate(-2px, -2px);
+}
+
+.btn-secondary:active {
+  box-shadow: 1px 1px 0px #000000;
+  transform: translate(2px, 2px);
+}
+
+.btn-link {
+  background: transparent;
+  color: #000000;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid #000000;
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.btn-link:hover {
+  color: var(--text-secondary);
+  border-color: var(--text-secondary);
+  transform: none;
+  box-shadow: none;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000000;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  background: #ffffff;
+  border: var(--border-width) solid #000000;
+  border-radius: 0px;
+  color: #000000;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all 0.15s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000000;
+}
+
+/* Section Header Typography */
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-tag {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: #000000;
+  background: #ffffff;
+  border: var(--border-width) solid #000000;
+  padding: 0.3rem 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-family: var(--font-mono);
+  box-shadow: var(--shadow-sm);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.2rem;
+  letter-spacing: -1px;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  section {
+    padding: 5rem 0;
+  }
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .container {
+    padding: 0 1.5rem;
+  }
 }

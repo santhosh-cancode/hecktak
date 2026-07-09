@@ -1,0 +1,318 @@
+.billing-showcase-section {
+  position: relative;
+  background: #ffffff;
+}
+
+.billing-sphere {
+  display: none;
+}
+
+.billing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.billing-features {
+  display: flex;
+  flex-direction: column;
+}
+
+.features-headline {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.features-subtext {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.feat-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.feat-number {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000000;
+  background: #ffffff;
+  border: var(--border-width) solid #000000;
+  box-shadow: var(--shadow-sm);
+  padding: 0.3rem 0.7rem;
+  border-radius: 0px;
+  line-height: 1;
+}
+
+.feat-content h4 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 0.4rem;
+}
+
+.feat-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Terminal Design */
+.billing-terminal {
+  padding: 0;
+  border-radius: 0px;
+  overflow: hidden;
+  border: var(--border-width) solid #000000;
+  box-shadow: var(--shadow-lg);
+}
+
+.terminal-header {
+  background: #000000;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-bottom: var(--border-width) solid #000000;
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 0px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+}
+
+.terminal-header h4 {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.terminal-body {
+  padding: 2.2rem;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.terminal-input {
+  background: #ffffff;
+  border: var(--border-width) solid #000000;
+  box-shadow: var(--shadow-sm);
+  border-radius: 0px;
+}
+
+.terminal-input:focus {
+  box-shadow: 5px 5px 0px #000000;
+}
+
+/* Quick Add Tags */
+.terminal-add-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.add-label {
+  font-size: 0.75rem;
+  color: #000000;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.items-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.btn-add-tag {
+  background: #ffffff;
+  border: var(--border-width) solid #000000;
+  color: #000000;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.1s ease;
+}
+
+.btn-add-tag:hover {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+/* Receipt Preview styling */
+.terminal-receipt {
+  background: #ffffff;
+  color: #000000;
+  border-radius: 0px;
+  border: var(--border-width) solid #000000;
+  padding: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  box-shadow: none;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.receipt-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dashed #000000;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.receipt-brand {
+  letter-spacing: 1px;
+}
+
+.receipt-meta {
+  margin-bottom: 0.8rem;
+  color: #000000;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.receipt-table th {
+  text-align: left;
+  padding-bottom: 0.5rem;
+  border-bottom: var(--border-width) solid #000000;
+  color: #000000;
+  font-weight: 700;
+}
+
+.receipt-table td {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.receipt-table th:nth-child(2), .receipt-table td:nth-child(2) { text-align: center; }
+.receipt-table th:nth-child(3), .receipt-table td:nth-child(3) { text-align: right; }
+.receipt-table th:nth-child(4), .receipt-table td:nth-child(4) { text-align: right; }
+
+.empty-receipt-msg {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem 0 !important;
+}
+
+.btn-remove-item {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  line-height: 1;
+}
+
+.btn-remove-item:hover {
+  color: #b91c1c;
+}
+
+.receipt-summary {
+  margin-top: auto;
+  border-top: var(--border-width) solid #000000;
+  padding-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+}
+
+.total-row {
+  font-weight: 800;
+  color: #000000;
+  font-size: 0.9rem;
+  border-top: 2px dashed #000000;
+  padding-top: 0.5rem;
+}
+
+/* Submit state animations */
+.btn-block {
+  width: 100%;
+}
+
+.terminal-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.terminal-submit:disabled {
+  background: #ffffff;
+  color: var(--text-muted);
+  border-color: #6b7280;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.success-state {
+  background: var(--color-success);
+  color: #ffffff;
+  border-color: #000000;
+  box-shadow: var(--shadow-sm);
+}
+
+.success-state:hover {
+  background: var(--color-success);
+  color: #ffffff;
+  border-color: #000000;
+  box-shadow: var(--shadow-sm);
+  transform: none;
+}
+
+.success-check {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 968px) {
+  .billing-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
