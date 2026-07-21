@@ -171,13 +171,13 @@ function Contact() {
 
             {submitStatus === 'success' && (
               <div className="form-alert alert-success">
-                🎉 Success! We have received your request and will contact you within 24 hours.
+                Success! We have received your request and will contact you within 24 hours.
               </div>
             )}
             
             {submitStatus === 'error' && (
               <div className="form-alert alert-error">
-                ⚠️ Please fill out all fields correctly before submitting.
+                Please fill out all fields correctly before submitting.
               </div>
             )}
           </form>

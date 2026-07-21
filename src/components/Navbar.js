@@ -4,6 +4,7 @@ import './Navbar.css';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +21,15 @@ function Navbar() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    if (isOpen) {
+      setDropdownOpen(false);
+    }
   };
 
   const handleLinkClick = (e, id) => {
     e.preventDefault();
     setIsOpen(false);
+    setDropdownOpen(false);
     const element = document.getElementById(id);
     if (element) {
       const offset = 80; // height of navbar
@@ -37,6 +42,15 @@ function Navbar() {
         top: offsetPosition,
         behavior: 'smooth'
       });
+    }
+  };
+
+  const handleServicesClick = (e) => {
+    if (window.innerWidth <= 968) {
+      e.preventDefault();
+      setDropdownOpen(!dropdownOpen);
+    } else {
+      handleLinkClick(e, 'services');
     }
   };
 
@@ -58,8 +72,33 @@ function Navbar() {
           <li>
             <a href="#home" onClick={(e) => handleLinkClick(e, 'home')}>Home</a>
           </li>
-          <li>
-            <a href="#services" onClick={(e) => handleLinkClick(e, 'services')}>Services</a>
+          <li className={`navbar-dropdown-wrapper ${dropdownOpen ? 'dropdown-active' : ''}`}>
+            <a href="#services" onClick={handleServicesClick} className="navbar-dropdown-toggle">
+              Services
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" strokeWidth="2.5" className="dropdown-arrow-icon" style={{ marginLeft: '6px', verticalAlign: 'middle', transition: 'transform 0.2s ease' }}>
+                <polyline points="1 1 5 5 9 1"></polyline>
+              </svg>
+            </a>
+            <ul className="navbar-dropdown-menu">
+              <li>
+                <a href="#service-website-development" onClick={(e) => handleLinkClick(e, 'service-website-development')}>Website Development</a>
+              </li>
+              <li>
+                <a href="#service-ui-design" onClick={(e) => handleLinkClick(e, 'service-ui-design')}>UI Design</a>
+              </li>
+              <li>
+                <a href="#service-domain-hosting-setup" onClick={(e) => handleLinkClick(e, 'service-domain-hosting-setup')}>Domain & Hosting</a>
+              </li>
+              <li>
+                <a href="#service-web-applications" onClick={(e) => handleLinkClick(e, 'service-web-applications')}>Web Applications</a>
+              </li>
+              <li>
+                <a href="#service-digital-marketing" onClick={(e) => handleLinkClick(e, 'service-digital-marketing')}>Digital Marketing</a>
+              </li>
+              <li>
+                <a href="#service-personal-portfolio" onClick={(e) => handleLinkClick(e, 'service-personal-portfolio')}>Personal Portfolio</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#portfolio" onClick={(e) => handleLinkClick(e, 'portfolio')}>Our Works</a>

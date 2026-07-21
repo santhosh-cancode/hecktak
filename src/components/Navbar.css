@@ -72,6 +72,69 @@
   border-bottom: 2px solid #000000;
 }
 
+/* Dropdown Menu Styles */
+.navbar-dropdown-wrapper {
+  position: relative;
+}
+
+.navbar-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: var(--border-width) solid #000000;
+  box-shadow: var(--shadow-sm);
+  min-width: 240px;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1010;
+  pointer-events: none;
+  list-style: none;
+}
+
+.navbar-dropdown-wrapper:hover .navbar-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.navbar-dropdown-wrapper:hover .dropdown-arrow-icon {
+  transform: rotate(180deg);
+}
+
+.navbar-dropdown-menu li {
+  width: 100%;
+}
+
+.navbar-dropdown-menu li a {
+  display: block;
+  padding: 0.7rem 1.5rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  border-bottom: none !important;
+}
+
+.navbar-dropdown-menu li a:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-bottom: none !important;
+}
+
 .nav-btn {
   padding: 0.5rem 1.2rem;
   font-size: 0.8rem;
@@ -143,5 +206,56 @@
 
   .nav-btn-item {
     margin-top: 1.5rem;
+  }
+
+  /* Mobile Dropdown Styles */
+  .navbar-dropdown-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-dropdown-toggle {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar-dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-left: var(--border-width) solid #000000;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    min-width: auto;
+    display: none;
+    padding: 0 0 0 1.5rem;
+    text-align: left;
+    transition: none;
+    width: fit-content;
+  }
+
+  .navbar-dropdown-wrapper.dropdown-active .navbar-dropdown-menu {
+    display: block;
+  }
+
+  .navbar-dropdown-wrapper.dropdown-active .dropdown-arrow-icon {
+    transform: rotate(180deg);
+  }
+
+  .navbar-dropdown-menu li a {
+    padding: 0.5rem 0;
+    font-size: 0.8rem !important;
+  }
+
+  .navbar-dropdown-menu li a:hover {
+    background: transparent !important;
+    color: #000000 !important;
+    border-bottom: 2px solid #000000 !important;
   }
 }

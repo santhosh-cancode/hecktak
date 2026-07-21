@@ -83,7 +83,11 @@ function Services() {
 
         <div className="services-grid">
           {servicesList.map((service, index) => (
-            <div key={index} className="glass-panel service-card">
+            <div 
+              key={index} 
+              className="glass-panel service-card" 
+              id={`service-${service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+            >
               <div className="service-icon-wrapper">
                 {service.icon}
               </div>
