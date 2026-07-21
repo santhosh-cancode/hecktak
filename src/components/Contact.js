@@ -5,7 +5,7 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    service: 'Static Website',
+    service: 'Website Development',
     message: ''
   });
   const [submitStatus, setSubmitStatus] = useState(null); // 'sending', 'success', 'error'
@@ -32,7 +32,7 @@ function Contact() {
       setFormData({
         name: '',
         email: '',
-        service: 'Static Website',
+        service: 'Website Development',
         message: ''
       });
       
@@ -77,7 +77,7 @@ function Contact() {
               </div>
               <div className="info-card-content">
                 <h4>Call Us</h4>
-                <p>+91 98765 43210</p>
+                <p>+91 94881 03079</p>
               </div>
             </div>
 
@@ -90,7 +90,7 @@ function Contact() {
               </div>
               <div className="info-card-content">
                 <h4>Location</h4>
-                <p>Trichy, Tamil Nadu, India</p>
+                <p>Thanjavur, Tamil Nadu, India</p>
               </div>
             </div>
           </div>
@@ -137,11 +137,12 @@ function Contact() {
                 onChange={handleChange}
                 className="form-control select-control"
               >
-                <option value="Static Website">Static Website</option>
-                <option value="Dynamic Website">Dynamic Website</option>
-                <option value="Billing Software">Billing Software</option>
-                <option value="Web Application">Web Application</option>
+                <option value="Website Development">Website Development</option>
+                <option value="UI Design">UI Design</option>
+                <option value="Domain & Hosting Setup">Domain & Hosting Setup</option>
+                <option value="Web Applications">Web Applications</option>
                 <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Personal Portfolio">Personal Portfolio</option>
                 <option value="Other">Other Services</option>
               </select>
             </div>

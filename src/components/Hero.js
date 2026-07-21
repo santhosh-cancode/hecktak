@@ -119,6 +119,23 @@ function Hero() {
           </div>
         </div>
       </div>
+      <div className="hero-ticker">
+        <div className="ticker-wrapper">
+          <span className="ticker-item">✦ WEBSITE DEVELOPMENT </span>
+          <span className="ticker-item">✦ UI DESIGN </span>
+          <span className="ticker-item">✦ WEB APPLICATIONS </span>
+          <span className="ticker-item">✦ DIGITAL MARKETING </span>
+          <span className="ticker-item">✦ PERSONAL PORTFOLIO </span>
+          <span className="ticker-item">✦ DOMAIN & HOSTING SETUP </span>
+          {/* Duplicate for infinite loop */}
+          <span className="ticker-item">✦ WEBSITE DEVELOPMENT </span>
+          <span className="ticker-item">✦ UI DESIGN </span>
+          <span className="ticker-item">✦ WEB APPLICATIONS </span>
+          <span className="ticker-item">✦ DIGITAL MARKETING </span>
+          <span className="ticker-item">✦ PERSONAL PORTFOLIO </span>
+          <span className="ticker-item">✦ DOMAIN & HOSTING SETUP </span>
+        </div>
+      </div>
     </section>
   );
 }

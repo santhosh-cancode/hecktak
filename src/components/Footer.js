@@ -54,10 +54,12 @@ function Footer() {
         <div className="footer-links">
           <h3>Services</h3>
           <ul>
-            <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')}>Web Design</a></li>
-            <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')}>Web App Development</a></li>
-            <li><a href="#billing" onClick={(e) => handleLinkClick(e, 'billing')}>Billing Systems</a></li>
+            <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')}>Website Development</a></li>
+            <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')}>UI Design</a></li>
+            <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')}>Web Applications</a></li>
             <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')}>Digital Marketing</a></li>
+            <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')}>Personal Portfolio</a></li>
+            <li><a href="#services" onClick={(e) => handleLinkClick(e, 'services')}>Domain & Hosting</a></li>
           </ul>
         </div>
 
@@ -73,9 +75,9 @@ function Footer() {
 
         <div className="footer-contact">
           <h3>Contact Info</h3>
-          <p>📍 Trichy, Tamil Nadu, India</p>
+          <p>📍 Thanjavur, Tamil Nadu, India</p>
           <p>📧 contact@hecktak.com</p>
-          <p>📞 +91 98765 43210</p>
+          <p>📞 +91 94881 03079</p>
         </div>
       </div>
       <div className="footer-bottom">

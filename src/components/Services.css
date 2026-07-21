@@ -16,12 +16,12 @@
   border-radius: 0px;
   box-shadow: var(--shadow-md);
   transform: translate(0, 0);
-  transition: all 0.15s ease;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .service-card:hover {
   box-shadow: var(--shadow-lg);
-  transform: translate(-4px, -4px);
+  transform: translate(-6px, -6px);
 }
 
 .service-icon-wrapper {
@@ -35,14 +35,23 @@
   color: #000000;
   border: var(--border-width) solid #000000;
   margin-bottom: 2rem;
-  transition: all 0.15s ease;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
   box-shadow: var(--shadow-sm);
+}
+
+.service-icon-wrapper svg {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .service-card:hover .service-icon-wrapper {
   background: #000000;
   color: #ffffff;
   box-shadow: none;
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.service-card:hover .service-icon-wrapper svg {
+  transform: scale(1.05);
 }
 
 .service-card-title {

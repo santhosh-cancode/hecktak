@@ -292,3 +292,95 @@
     gap: 0.8rem;
   }
 }
+
+/* Stark Neobrutalist Animations */
+
+/* 1. Infinite Scrolling Marquee */
+.hero-ticker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  border-top: var(--border-width) solid #000000;
+  border-bottom: var(--border-width) solid #000000;
+  padding: 0.8rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.05);
+}
+
+.ticker-wrapper {
+  display: inline-flex;
+  animation: ticker 35s linear infinite;
+}
+
+.ticker-item {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 1.5rem;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* 2. Floating Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-fast {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.badge-top {
+  animation: float-slow 7s ease-in-out infinite !important;
+}
+
+.badge-bottom {
+  animation: float-fast 6s ease-in-out infinite !important;
+}
+
+/* 3. Smooth Graphic Card Hover */
+.card-main {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.card-main:hover {
+  transform: translateY(-6px) rotate(-1deg) !important;
+  box-shadow: 12px 12px 0px #000000 !important;
+}

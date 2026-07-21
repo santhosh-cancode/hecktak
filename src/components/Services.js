@@ -5,24 +5,36 @@ const servicesList = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+    ),
+    title: "Website Development",
+    description: "Custom full-stack web development using modern technologies. We build secure, interactive, and database-driven dynamic websites and applications."
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
         <line x1="8" y1="21" x2="16" y2="21"></line>
         <line x1="12" y1="17" x2="12" y2="21"></line>
       </svg>
     ),
-    title: "Static Websites",
-    description: "Ultra-fast, fully responsive, and SEO-optimized business websites. Ideal for landing pages, portfolios, and marketing sites built for maximum speed and conversions."
+    title: "UI Design",
+    description: "Clean, intuitive, and interactive user interface (UI) designs. We focus on modern layouts, smooth micro-animations, and outstanding usability."
   },
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-        <path d="M2 17l10 5 10-5"></path>
-        <path d="M2 12l10 5 10-5"></path>
+        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+        <line x1="6" y1="6" x2="6.01" y2="6"></line>
+        <line x1="6" y1="18" x2="6.01" y2="18"></line>
       </svg>
     ),
-    title: "Dynamic Websites",
-    description: "Interactive websites powered by flexible content management systems (CMS). Enable real-time updates, custom user portals, blogs, and secure data storage."
+    title: "Domain & Hosting Setup",
+    description: "End-to-end domain acquisition, fast hosting deployment, SSL certification, and configuration of business emails for a seamless launch."
   },
   {
     icon: (
@@ -38,22 +50,22 @@ const servicesList = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-        <path d="M10 4v16M2 10h20"></path>
-      </svg>
-    ),
-    title: "Billing Software",
-    description: "Comprehensive POS, invoice management, GST reporting, and stock-tracking systems tailored for retail, wholesale, and service-based companies."
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M23 6l-9.5 9.5-5-5L1 18"></path>
         <polyline points="17 6 23 6 23 12"></polyline>
       </svg>
     ),
     title: "Digital Marketing",
     description: "Targeted SEO campaigns, social media marketing (SMM), search engine marketing, and custom growth analytics designed to maximize lead generation."
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    ),
+    title: "Personal Portfolio",
+    description: "Bespoke personal portfolio websites designed for creators, executives, and professionals. Highlight your achievements, showcase your projects, and build a powerful personal brand online."
   }
 ];
 
